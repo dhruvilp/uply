@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../style.dart';
 
-class UplyWarning extends StatelessWidget {
+class UplySuccess extends StatelessWidget {
   final String body;
 
-  const UplyWarning({Key key, this.body}) : super(key: key);
+  const UplySuccess({Key key, this.body}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,8 @@ class UplyWarning extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       title: Icon(
-        Icons.warning,
-        color: pink,
+        Icons.check_circle,
+        color: green,
         size: 80.0,
       ),
       content: Text(

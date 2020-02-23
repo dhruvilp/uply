@@ -23,8 +23,6 @@ dependencies:
   http: ^0.12.0+2
   json_annotation: ^3.0.1
   url_launcher: ^5.0.2
-  arkit_plugin: ^0.3.0
-#  arcore_flutter_plugin: ^0.0.5+1
   arcore_flutter_plugin:
     git:
       url: git://github.com/giandifra/arcore_flutter_plugin.git

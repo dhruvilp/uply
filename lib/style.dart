@@ -24,13 +24,13 @@ const charcoal_light = const Color(0xFF4a4a4a);
 const charcoal = const Color(0xFF292929);
 const charcoal_dark = const Color(0xFF1A1A1A);
 const black = Colors.black;
-const semi_transparent = Colors.black87;
+const semi_transparent = Colors.black12;
 const transparent = const Color(0x00ffffff);
 const box_shadow = const Color(0x0d000000);
 const overlay = const Color.fromRGBO(0, 0, 0, 80);
 
 /// Gradient Colors
-const cyan_gradient = const LinearGradient(
+const pink_gradient = const LinearGradient(
   colors: [pink_light, red_light],
   begin: Alignment.topCenter,
   end: Alignment.bottomCenter,

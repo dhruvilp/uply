@@ -35,7 +35,9 @@ class _LoginState extends State<Login> {
       }
       else {
         var kPerson = await fetchPersonById(_usernameController.text);
-        _usernameController.text = null;
+        setState(() {
+          _usernameController.text = '';
+        });
         if(kPerson != null){
           Navigator.of(context).pushAndRemoveUntil(
             new MaterialPageRoute(builder: (BuildContext context) => Home(person: kPerson,)),
@@ -87,6 +89,7 @@ class _LoginState extends State<Login> {
                   fontSize: 20, color: Theme.of(context).primaryColor),
               controller: _usernameController,
               decoration: InputDecoration(
+                hintText: 'Enter your username',
                 labelText: 'Username *',
                 fillColor: Theme.of(context).primaryColor,
                 hasFloatingPlaceholder: true,
@@ -110,7 +113,7 @@ class _LoginState extends State<Login> {
               padding: EdgeInsets.all(0.0),
               child: Ink(
                 decoration: const BoxDecoration(
-                  gradient: cyan_gradient,
+                  gradient: pink_gradient,
                   borderRadius: BorderRadius.all(Radius.circular(15.0)),
                 ),
                 child: Container(

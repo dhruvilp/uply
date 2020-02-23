@@ -15,20 +15,37 @@ class Profile extends StatefulWidget {
 
 class _ProfileState extends State<Profile> {
 
-  TextStyle _kStyle = TextStyle(fontSize: 18.0, color: grey_mid, fontWeight: FontWeight.w600,);
+  TextStyle _kStyle = TextStyle(fontSize: 18.0, color: pink, fontWeight: FontWeight.w700,);
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       padding: EdgeInsets.all(10.0),
       children: <Widget>[
-        ListTile(
-          leading: Text('First Name', style: Theme.of(context).textTheme.subhead,),
-          title:  Text(widget.person.firstName, style: _kStyle),
-        ),
-        ListTile(
-          leading: Text('Last Name', style: Theme.of(context).textTheme.subhead,),
-          title:  Text(widget.person.lastName, style: _kStyle,),
+        Row(
+          children: <Widget>[
+            Expanded(
+              flex: 4,
+              child: Column(
+                children: <Widget>[
+                  ListTile(
+                    title: Text('First Name', style: Theme.of(context).textTheme.subhead,),
+                    subtitle:  Text(widget.person.firstName, style: _kStyle),
+                  ),
+                  ListTile(
+                    title: Text('Last Name', style: Theme.of(context).textTheme.subhead,),
+                    subtitle:  Text(widget.person.lastName, style: _kStyle,),
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Center(
+                child: Icon(Icons.person_pin, size: 80.0,),
+              ),
+            ),
+          ],
         ),
         ListTile(
           leading: Text('Email', style: Theme.of(context).textTheme.subhead,),

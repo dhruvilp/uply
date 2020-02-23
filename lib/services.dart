@@ -108,3 +108,63 @@ Future<Application> createApplication(int kJobId, int kPersonId, String kStatus)
     print('Something went wrong!');
   }
 }
+
+/// POST request
+Future<People> createUser(String nFirstName, String nLastName, String nEmail, String eduDegree,
+    String eduSchool, String eduMajor, String eduGradDate) async {
+  var response = await postRequest(
+      "/people",
+      {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer" + API_KEY
+      },
+      {
+        "email": nEmail,
+        "firstName": nFirstName,
+        "middleName": "M",
+        "lastName": nLastName,
+        "address": {
+          "street": "123 Cook St",
+          "city": "Gotham",
+          "state": "New York",
+          "zip": "49946",
+          "country": "USA"
+        },
+        "education": [
+          {
+            "degree": eduDegree,
+            "school": eduSchool,
+            "major": eduMajor,
+            "graduationDate": eduGradDate
+          }
+        ],
+        "skills": [
+          {
+            "name": "Java",
+            "level": "Expert"
+          },
+          {
+            "name": "Pyhton",
+            "level": "Expert"
+          },
+          {
+            "name": "Communication",
+            "level": "Advance"
+          },
+          {
+            "name": "AWS",
+            "level": "Beginner"
+          }
+        ],
+      }
+  );
+  if (response.statusCode == 200) {
+    return People.fromJson(jsonDecode(response.body));
+  } else if(response.statusCode == 400) {
+    throw BadRequest();
+  } else if(response.statusCode == 404) {
+    throw CompanyNotFound();
+  } else {
+    throw SomethingWentWrong();
+  }
+}
