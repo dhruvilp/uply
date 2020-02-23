@@ -18,7 +18,7 @@ final String kAppIconTransparent = "assets/app_icon_transparent.png";
 ///---------------------------------------
 
 const String kAppTitle = "UPLY";
-const String kAppSubTitle = "While In Line, Apply For A Job";
+const String kAppSubTitle = "The Future Of Job Applying";
 
 
 ///---------------------------------------

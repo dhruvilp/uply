@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:http/http.dart' as http;
-import 'package:uply/example.secrets.dart';
 import 'package:uply/models.dart';
+import 'package:uply/secrets.dart';
+import 'package:uply/ui/widgets/exceptions.dart';
 
 import 'defaults.dart';
 
@@ -46,7 +46,7 @@ Future<Application> fetchApplications() async {
     "/applications",
     {
       "Content-Type": "application/json",
-      HttpHeaders.authorizationHeader: API_KEY
+      "Authorization": "Bearer" + API_KEY
     },
   );
   if (response.statusCode == 200) {
@@ -57,13 +57,43 @@ Future<Application> fetchApplications() async {
   }
 }
 
+Future<Job> fetchJobById(int kJobId) async {
+  var response = await getRequest(
+    "/jobs/$kJobId",
+    {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer" + API_KEY
+    },
+  );
+  if (response.statusCode == 200) {
+    var data = jsonDecode(response.body);
+    return Job.fromJson(data);
+  } else {
+    print('Something went wrong!');
+  }
+}
+Future<People> fetchPersonById(String kPersonId) async {
+  var response = await getRequest(
+    "/people/$kPersonId",
+    {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer $API_KEY"
+    },
+  );
+  if (response.statusCode == 200) {
+    return People.fromJson(jsonDecode(response.body));
+  } else if(response.statusCode == 404){
+    throw UserNotFound();
+  }
+}
+
 /// POST request
 Future<Application> createApplication(int kJobId, int kPersonId, String kStatus) async {
   var response = await postRequest(
     "/applications",
     {
       "Content-Type": "application/json",
-      HttpHeaders.authorizationHeader: API_KEY
+      "Authorization": "Bearer" + API_KEY
     },
     {
       "jobId": kJobId,

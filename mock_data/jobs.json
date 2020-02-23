@@ -1,7 +1,32 @@
 [
   {
     "title": "Software Engineer",
-    "description": "If you can build cool gigs then you are in!",
-    "skills": ["Java", "Python", "APIs"]
+    "description": "Are you passionate about innovation? Do you have experience with large-scale software development and integration? We’re looking for a highly collaborative problem solver to join our team as a Software Engineer where you’ll be responsible for executing a vision for building software, systems, and integrations that complement existing business enablement software and services. In this role, you will operate across organizational and technology “silos” to implement systems and platforms that facilitate seamless integration between multi-cloud systems and SaaS applications. As the Systems Engineer, you will work closely with Information Security, Technology and Business Subject Matter Experts, and IT and Business Leaders. We’re looking for a self-starter who is eager to provide hands-on experience to develop our platform. If you’re a keen learner who is adept at performing under pressure, we’re ready for you to come on board.",
+    "skills": ["Java", "Python", "APIs", "C++", "JavaScript","C", "Data Structures", "Algorithms"],
+    "degree": ["Bachelor's","Masters","PhD"]
+  },
+  {
+    "title": "Data Scientist",
+    "description":"We are looking for a Data Scientist who will support our product, sales, leadership and marketing teams with insights gained from analyzing company data. The ideal candidate is adept at using large data sets to find opportunities for product and process optimization and using models to test the effectiveness of different courses of action. They must have strong experience using a variety of data mining/data analysis methods, using a variety of data tools, building and implementing models, using/creating algorithms and creating/running simulations. They must have a proven ability to drive business results with their data-based insights. They must be comfortable working with a wide range of stakeholders and functional teams. The right candidate will have a passion for discovering solutions hidden in large data sets and working with stakeholders to improve business outcomes.",
+    "skills": ["R", "SAS", "Stata", "MATLAB", "SQL", "Python", "Machine Learning Algorithms", "Data Structures", "Big Data"],
+    "degree": ["Masters", "PhD"]
+  },
+  {
+    "title": "UX/UI developer",
+    "description": "We are looking for a UI/UX Designer to turn our software into easy-to-use products for our clients. UI/UX Designer responsibilities include gathering user requirements, designing graphic elements and building navigation components. To be successful in this role, you should have experience with design software and wireframe tools. If you also have a portfolio of professional design projects that includes work with web/mobile applications, we’d like to meet you. Ultimately, you’ll create both functional and appealing features that address our clients’ needs and help us grow our customer base.",
+    "skills": ["API", "HTML", "CSS", "JavaScript", "User testing", "Wireframe","GIT", "TFS", "NodeJS", "React.js", "Vue.js", "C#",".NET"],
+    "degree": "Bachelor's"
+  },
+  {
+    "title":"HR",
+    "description": "We are looking to employ an enthusiastic and driven HR Intern to assist our HR department with administrative and HR-related tasks. The HR Intern’s responsibilities include updating employee absence records, filing HR documents accordingly, initiating background checks on shortlisted candidates, and providing suitable recommendations to improve HR policies. You should also be able to draft employee communications notifying staff of policy and procedural changes. To be successful as an HR Intern, you should keep abreast of the latest developments in labor legislation to determine how company HR policies may be affected. Ultimately, an outstanding HR Intern should be detail-oriented and able to demonstrate excellent administrative and organizational skills.",
+    "skills": ["Attention to detail", "Microsoft Office (Word, PowerPoint, Excel)", "Written and Verbal Communication", "Interpersonal Skills", "Teamwork"],
+    "degree": "Bachelor's"
+  },
+  {
+    "title": "Business Analyst",
+    "description": "The company is seeking a motivated business analyst intern who is ready to apply knowledge of business practices and processes in a fast-paced, real-world environment. The intern will assist in writing reports, conducting research, analyzing data, and making recommendations to improve effectiveness and efficiency. This will be a valuable experience for any student pursuing a career in business administration.",
+    "skills": ["Microsoft Office", "Microsoft Access","Critical Thinking", "Problem Solving", "Written and Verbal Communications", "SQL"],
+    "degree": "Bachelor's"
   }
 ]

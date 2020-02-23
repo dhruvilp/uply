@@ -50,16 +50,59 @@ class CustomJob {
 
 
 ///=======================================
-///             APPLICATION
+///               PEOPLE
 ///=======================================
+
+@JsonSerializable(nullable: false)
+class Address {
+  final String street;
+  final String city;
+  final String state;
+  final String zip;
+  final String country;
+
+  Address(this.street, this.city, this.state, this.zip, this.country);
+
+  factory Address.fromJson(Map<String, dynamic> json) => _$AddressFromJson(json);
+  Map<String, dynamic> toJson() => _$AddressToJson(this);
+}
+
+@JsonSerializable(nullable: false)
+class Education {
+  final String degree;
+  final String school;
+  final String major;
+  final String graduationDate;
+
+  Education(this.degree, this.school, this.major, this.graduationDate);
+
+  factory Education.fromJson(Map<String, dynamic> json) => _$EducationFromJson(json);
+  Map<String, dynamic> toJson() => _$EducationToJson(this);
+}
+
+@JsonSerializable(nullable: false)
+class Skill {
+  final String name;
+  final String level;
+
+  Skill(this.name, this.level);
+
+  factory Skill.fromJson(Map<String, dynamic> json) => _$SkillFromJson(json);
+  Map<String, dynamic> toJson() => _$SkillToJson(this);
+}
 
 @JsonSerializable(nullable: false)
 class People {
   final int id;
-  final int jobId;
-  final int personId;
+  final String email;
+  final String firstName;
+  final String middleName;
+  final String lastName;
+  final Address address;
+  final List<Education> education;
+  final List<Skill> skills;
 
-  People(this.id, this.jobId, this.personId, this.status);
+  People(this.id, this.email, this.firstName, this.middleName, this.lastName, this.address, this.education, this.skills);
 
   factory People.fromJson(Map<String, dynamic> json) => _$PeopleFromJson(json);
   Map<String, dynamic> toJson() => _$PeopleToJson(this);
