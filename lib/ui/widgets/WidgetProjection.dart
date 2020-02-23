@@ -73,7 +73,7 @@ class _WidgetProjectionPageState extends State<WidgetProjectionPage> {
       augmentedImagesMap[augmentedImage.index] = augmentedImage;
     }
     setState(() {
-      x = augmentedImage.centerPose.rotation[0] * 30;    // left
+      x = augmentedImage.centerPose.rotation[0] * 35;    // left
       y = augmentedImage.centerPose.rotation[3] * 50;    // top
       width = augmentedImage.extentZ * 2500;
       height = augmentedImage.extentZ * 3500;
