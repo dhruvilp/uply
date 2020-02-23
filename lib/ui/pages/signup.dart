@@ -3,6 +3,7 @@ import 'package:keyboard_avoider/keyboard_avoider.dart';
 import 'package:uply/services.dart';
 import 'package:uply/style.dart';
 import 'package:uply/ui/pages/login.dart';
+import 'package:uply/ui/widgets/UplySuccess.dart';
 import 'package:uply/ui/widgets/UplyWarning.dart';
 
 class SignUp extends StatefulWidget {
@@ -41,7 +42,8 @@ class _SignUpState extends State<SignUp> {
       else {
         var newUser = await createUser(_kFirstNameCont.text, _kLastNameCont.text, _kEmailCont.text, _kDegreeCont.text, _kSchoolCont.text, _kMajorCont.text, _kGradDateCont.text);
         if(newUser != null){
-          print(newUser.firstName);
+          UplySuccess(body: 'Successfully created a user!');
+
           Navigator.pop(context);
         }
         else{

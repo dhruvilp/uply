@@ -25,7 +25,7 @@ class _ProfileState extends State<Profile> {
         Row(
           children: <Widget>[
             Expanded(
-              flex: 4,
+              flex: 3,
               child: Column(
                 children: <Widget>[
                   ListTile(
@@ -40,7 +40,7 @@ class _ProfileState extends State<Profile> {
               ),
             ),
             Expanded(
-              flex: 2,
+              flex: 3,
               child: Center(
                 child: Icon(Icons.person_pin, size: 80.0,),
               ),
@@ -48,28 +48,24 @@ class _ProfileState extends State<Profile> {
           ],
         ),
         ListTile(
-          leading: Text('Email', style: Theme.of(context).textTheme.subhead,),
-          title:  Text(widget.person.email, style: _kStyle,),
+          title: Text('Email', style: Theme.of(context).textTheme.subhead,),
+          subtitle:  Text(widget.person.email.toLowerCase(), style: _kStyle,),
         ),
         ListTile(
-          leading: Text('Address', style: Theme.of(context).textTheme.subhead, maxLines: null,),
-          title:  Text('${widget.person.address.street}, ${widget.person.address.city}, ${widget.person.address.state}, ${widget.person.address.zip}, ${widget.person.address.country}', style: _kStyle,),
+          title: Text('Address', style: Theme.of(context).textTheme.subhead, maxLines: null,),
+          subtitle:  Text('${widget.person.address.street}, ${widget.person.address.city}, ${widget.person.address.state}, ${widget.person.address.zip}, ${widget.person.address.country}', style: _kStyle,),
         ),
         ListTile(
-          leading: Text('Degree', style: Theme.of(context).textTheme.subhead,),
-          title:  Text(widget.person.education.first.degree, style: _kStyle,),
+          title: Text('Degree/School', style: Theme.of(context).textTheme.subhead,),
+          subtitle:  Text("${widget.person.education.first.degree} from ${widget.person.education.first.school}", style: _kStyle,),
         ),
         ListTile(
-          leading: Text('School', style: Theme.of(context).textTheme.subhead,),
-          title:  Text(widget.person.education.first.school, style: _kStyle,),
+          title: Text('Major', style: Theme.of(context).textTheme.subhead,),
+          subtitle:  Text(widget.person.education.first.major, style: _kStyle,),
         ),
         ListTile(
-          leading: Text('Major', style: Theme.of(context).textTheme.subhead,),
-          title:  Text(widget.person.education.first.major, style: _kStyle,),
-        ),
-        ListTile(
-          leading: Text('Grad Date', style: Theme.of(context).textTheme.subhead,),
-          title:  Text(widget.person.education.first.graduationDate, style: _kStyle,),
+          title: Text('Grad Date', style: Theme.of(context).textTheme.subhead,),
+          subtitle:  Text(widget.person.education.first.graduationDate, style: _kStyle,),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 18.0),

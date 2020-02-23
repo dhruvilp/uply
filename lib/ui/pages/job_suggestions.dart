@@ -80,7 +80,7 @@ class _JobCardState extends State<JobCard> {
     }
 
     return Card(
-      margin: EdgeInsets.all(15.0),
+      margin: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25.0),
       ),
@@ -96,10 +96,10 @@ class _JobCardState extends State<JobCard> {
           ),
           Padding(
             padding: const EdgeInsets.all(15.0),
-            child: Text(widget.degree, style: Theme.of(context).textTheme.subhead,),
+            child: Text("Degree Required: ${widget.degree}", style: Theme.of(context).textTheme.body2,),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 18.0),
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Wrap(
               spacing: 8.0,
               runSpacing: 4.0,

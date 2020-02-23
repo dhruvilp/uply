@@ -46,7 +46,7 @@ Future<Application> fetchApplications() async {
     "/applications",
     {
       "Content-Type": "application/json",
-      "Authorization": "Bearer" + API_KEY
+      "Authorization": "Bearer $API_KEY"
     },
   );
   if (response.statusCode == 200) {
@@ -62,7 +62,7 @@ Future<Job> fetchJobById(int kJobId) async {
     "/jobs/$kJobId",
     {
       "Content-Type": "application/json",
-      "Authorization": "Bearer" + API_KEY
+      "Authorization": "Bearer $API_KEY"
     },
   );
   if (response.statusCode == 200) {
@@ -93,7 +93,7 @@ Future<Application> createApplication(int kJobId, int kPersonId, String kStatus)
     "/applications",
     {
       "Content-Type": "application/json",
-      "Authorization": "Bearer" + API_KEY
+      "Authorization": "Bearer $API_KEY"
     },
     {
       "jobId": kJobId,
@@ -116,16 +116,15 @@ Future<People> createUser(String nFirstName, String nLastName, String nEmail, St
       "/people",
       {
         "Content-Type": "application/json",
-        "Authorization": "Bearer" + API_KEY
+        "Authorization": "Bearer $API_KEY"
       },
       {
         "email": nEmail,
         "firstName": nFirstName,
-        "middleName": "M",
         "lastName": nLastName,
         "address": {
-          "street": "123 Cook St",
-          "city": "Gotham",
+          "street": "123 50th Ave",
+          "city": "NYC",
           "state": "New York",
           "zip": "49946",
           "country": "USA"
@@ -144,21 +143,17 @@ Future<People> createUser(String nFirstName, String nLastName, String nEmail, St
             "level": "Expert"
           },
           {
-            "name": "Pyhton",
-            "level": "Expert"
-          },
-          {
-            "name": "Communication",
-            "level": "Advance"
-          },
-          {
             "name": "AWS",
             "level": "Beginner"
+          },
+          {
+            "name": "Databases",
+            "level": "Expert"
           }
-        ],
+        ]
       }
   );
-  if (response.statusCode == 200) {
+  if (response.statusCode == 201) {
     return People.fromJson(jsonDecode(response.body));
   } else if(response.statusCode == 400) {
     throw BadRequest();
