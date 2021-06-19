@@ -35,13 +35,6 @@ App Demo: https://www.youtube.com/watch?v=OG5CEfn53Oo&feature=youtu.be
 
 * ArCore functionalities, APIs, and advanced user interface with Flutter.  
 
-## What's Next For UPLY
-
-* Implement Google Maps AR tech into this app (you might have seen that AR street view navigation feature)
-* Add predictive ML models to make better decisions on when survivors can rescue themselves
-* Send a push notification letting the user know that what are the chances of natural disasters hitting their area and suggest to download AR Map in advance which will have pre-selected rescue camps.
-* And many more to come
-
 ## Getting Started With Flutter
 
 This project is a starting point for a Flutter application.
