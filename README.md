@@ -1,6 +1,6 @@
 ![Badge](https://img.shields.io/badge/HackHers-2020-blue)
 
-<h1 align="center" style="border-bottom: none;">UPLY</h1>
+<h1 align="center" style="border-bottom: none;">UPLY ("you-apply")</h1>
 <h3 align="center">The future of job applying using Augmented Reality</h3>
 
 <img align="right" src="screenshots/login.png" height="450em" />
